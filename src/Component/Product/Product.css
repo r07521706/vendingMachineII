@@ -1,0 +1,18 @@
+
+.product{
+    height:80px;
+    width:45px;
+    margin:10px;
+    border:2px solid;
+    float:left;
+  }
+  
+  .price{
+    position: absolute;
+    height:15px;
+    width:42px;
+    bottom:7px;
+    margin-left:1px;
+    border:1px solid;
+    float:left;
+  }

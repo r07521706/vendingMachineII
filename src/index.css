@@ -1,17 +1,5 @@
-.vending-machine-body{
-  position: relative;
-  margin: 50px auto;
-  height: 900px;
-  width: 600px;
-  border:2px solid
-}
-.product-row{
-  position: relative;
-  margin: 20px auto;
-  height: 100px;
-  width: 500px;
-  border:2px solid
-}
+
+
 .operate-panel{
 
   position: relative;
@@ -96,30 +84,13 @@
 .diplay-input-money{
   float:left;
   position: relative;
-  height: 50px;
+  height: 100px;
   width: 100px;
   border:2px solid;
   margin-top:15px;
 
 }
 
-.product{
-  height:80px;
-  width:45px;
-  margin:10px;
-  border:2px solid;
-  float:left;
-}
-
-.price{
-  position: absolute;
-  height:15px;
-  width:42px;
-  bottom:7px;
-  margin-left:1px;
-  border:1px solid;
-  float:left;
-}
 
 .number-button{
   height:25%;

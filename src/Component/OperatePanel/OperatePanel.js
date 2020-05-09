@@ -1,18 +1,24 @@
 import React from 'react'
 import Expressor from '../Expressor/Expressor'
-export default function OperatePanel() {
+import {connect} from 'react-redux'
+function OperatePanel(props) {
+    const inspectLength = ()=>{
+        if(props.machine.number.length>1){
+            props.cleanNumber()
+        }
+    }
     return (
         <div className="operate-panel">
             <div className = "input-button">
-                <div className='number-button'>1</div>
-                <div className='number-button'>2</div>
-                <div className='number-button'>3</div>
-                <div className='number-button'>4</div>
-                <div className='number-button'>5</div>
-                <div className='number-button'>6</div>
-                <div className='number-button'>7</div>
-                <div className='number-button'>8</div>
-                <div className='number-button'>9</div>
+                <div className='number-button' onClick={()=>{inspectLength();props.setNumber(1)}}>1</div>
+                <div className='number-button' onClick={()=>{inspectLength();props.setNumber(2)}}>2</div>
+                <div className='number-button' onClick={()=>{inspectLength();props.setNumber(3)}}>3</div>
+                <div className='number-button' onClick={()=>{inspectLength();props.setNumber(4)}}>4</div>
+                <div className='number-button' onClick={()=>{inspectLength();props.setNumber(5)}}>5</div>
+                <div className='number-button' onClick={()=>{inspectLength();props.setNumber(6)}}>6</div>
+                <div className='number-button' onClick={()=>{inspectLength();props.setNumber(7)}}>7</div>
+                <div className='number-button' onClick={()=>{inspectLength();props.setNumber(8)}}>8</div>
+                <div className='number-button' onClick={()=>{inspectLength();props.setNumber(9)}}>9</div>
             </div>
             
             <Expressor amount={20}></Expressor>
@@ -31,3 +37,21 @@ export default function OperatePanel() {
         </div>
     )
 }
+
+
+const mapStateToProps = state =>({
+    machine:state.machine,
+  })
+  const mapDispatchToProps =  dispatch=>({
+    setNumber:(number)=>dispatch(
+      {
+      type:'SET_NUMBER',
+      payload: number}
+      ),
+    cleanNumber:()=>dispatch(
+        {
+        type:'CLEAN_NUMBER'}
+        ),
+  
+  });
+export default connect(mapStateToProps,mapDispatchToProps)(OperatePanel);
