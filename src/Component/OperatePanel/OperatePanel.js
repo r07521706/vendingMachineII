@@ -26,8 +26,8 @@ function OperatePanel(props) {
             <Expressor amount={20}></Expressor>
 
             <div className = "money-area">
-                <div className = "back-button">
-                    <div className = "back-button-start"></div>
+                <div className = "back-button" onClick={()=>{props.cleanCoin()}}>
+                    <div className = "back-button-start" ></div>
                 </div>
                 <Board id = 'board-1' className ='board'>
                     <div className = "coin-slot" >
@@ -56,6 +56,10 @@ const mapStateToProps = state =>({
         {
         type:'CLEAN_NUMBER'}
         ),
-  
+    cleanCoin:()=>dispatch(
+        {
+        type:'CLEAN_COIN'
+        }
+    )  
   });
 export default connect(mapStateToProps,mapDispatchToProps)(OperatePanel);

@@ -33,6 +33,11 @@ const INITIAL_STATE={
                     ...state,
                     chooseCoin:action.payload
                 }
+            case 'CLEAN_COIN':
+                return{
+                    ...state,
+                    coin:0
+                }
            default:
                return state
        }
