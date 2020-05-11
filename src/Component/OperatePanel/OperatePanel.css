@@ -1,0 +1,72 @@
+.input-button{
+    position: relative;
+    margin: 20px 20px;
+    height: 100px;
+    width: 100px;
+    border:0px solid;
+    float : left ;
+  
+  }
+  
+  .coin-slot{
+    position: relative;
+    float: right;
+    margin: 20px;
+    height: 50px;
+    width: 50px;
+    border-radius:999em;
+    border:2px red solid ;
+    right: -10px;
+  
+  }
+  .back-button{
+    cursor: pointer;
+    position: relative;
+    float: right;
+    margin: 20px;
+    height: 50px;
+    width: 50px;
+    border-radius:999em;
+    border:2px red solid ;
+  }
+  
+  .back-button:active:nth-child(1) div{
+    cursor: pointer;
+    background:navy;
+    transform: rotate(180deg);
+    transition: all 1s ;
+    }
+
+  .back-button-start{
+    position: relative;
+    margin-left:4.5px;
+    margin-top:20px;
+    height:5px;
+    width:40px;
+    border:2px black solid ;
+    background-color: blue;
+  }
+  
+  .money-area{
+    float:right;
+    width: 200px;
+  }
+  
+  
+  .back-money-hole{
+    position: relative;
+    margin: 80px auto;
+    height: 30px;
+    width: 60px;
+    border:2px solid;
+    border-radius:9em;
+    background-color: black;
+  }
+  .hole{
+    position: relative;
+    margin-left:20px;
+    margin-top:4.5px;
+    height:40px;
+    width:5px;
+    border:2px black solid 
+  }

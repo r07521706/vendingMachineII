@@ -9,68 +9,7 @@
   border:2px solid
 
 }
-.input-button{
-  position: relative;
-  margin: 20px 20px;
-  height: 100px;
-  width: 100px;
-  border:0px solid;
-  float : left ;
 
-}
-
-.coin-slot{
-  position: relative;
-  float: right;
-  margin: 20px;
-  height: 50px;
-  width: 50px;
-  border-radius:999em;
-  border:2px red solid ;
-
-}
-.back-button{
-  position: relative;
-  float: right;
-  margin: 20px;
-  height: 50px;
-  width: 50px;
-  border-radius:999em;
-  border:2px red solid ;
-}
-
-.back-button-start{
-  position: relative;
-  margin-left:4.5px;
-  margin-top:20px;
-  height:5px;
-  width:40px;
-  border:2px black solid ;
-  background-color: blue;
-}
-
-.money-area{
-  float:right;
-}
-
-
-.back-money-hole{
-  position: relative;
-  margin: 80px auto;
-  height: 30px;
-  width: 60px;
-  border:2px solid;
-  border-radius:9em;
-  background-color: black;
-}
-.hole{
-  position: relative;
-  margin-left:20px;
-  margin-top:4.5px;
-  height:40px;
-  width:5px;
-  border:2px black solid 
-}
 .pickup-area{
   float: left;
   position: absolute;
@@ -85,7 +24,7 @@
   float:left;
   position: relative;
   height: 100px;
-  width: 100px;
+  width: 120px;
   border:2px solid;
   margin-top:15px;
 
@@ -93,9 +32,27 @@
 
 
 .number-button{
+  cursor: pointer;
   height:25%;
   width:25%;
   margin:10;
   border:2px solid;
   float:left;
+}
+
+.coin-area{
+  margin-top:50px;
+  margin-right:200px;
+  height:200px;
+  width:30%;
+  margin:10;
+  float:right;
+
+}
+.coin{
+  cursor: pointer;
+  float:left;
+  width:20%;
+  height: 70%;
+  margin:5px;
 }

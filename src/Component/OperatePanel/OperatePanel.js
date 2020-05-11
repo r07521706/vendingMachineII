@@ -1,6 +1,8 @@
 import React from 'react'
 import Expressor from '../Expressor/Expressor'
 import {connect} from 'react-redux'
+import Board from '../Board/Board'
+import './OperatePanel.css'
 function OperatePanel(props) {
     const inspectLength = ()=>{
         if(props.machine.number.length>1){
@@ -27,9 +29,11 @@ function OperatePanel(props) {
                 <div className = "back-button">
                     <div className = "back-button-start"></div>
                 </div>
-                <div className = "coin-slot">
-                    <div className = "hole"></div>
-                </div>
+                <Board id = 'board-1' className ='board'>
+                    <div className = "coin-slot" >
+                        <div className = "hole"></div>
+                    </div>
+                </Board>
                 <div className = "back-money-hole"></div>
             </div>
 

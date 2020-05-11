@@ -1,6 +1,8 @@
 const INITIAL_STATE={
     price:0,
-    number:''
+    number:'',
+    coin:0,
+    chooseCoin:''
    }
    
    const machineReducer = (state = INITIAL_STATE,action)=>{
@@ -20,6 +22,16 @@ const INITIAL_STATE={
                 return{
                     ...state,
                     number:''
+                }
+            case 'ADD_COIN':
+                return{
+                    ...state,
+                    coin:state.coin+Number(state.chooseCoin)
+                }
+            case 'CHOOSE_COIN':
+                return{
+                    ...state,
+                    chooseCoin:action.payload
                 }
            default:
                return state

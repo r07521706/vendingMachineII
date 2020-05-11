@@ -2,6 +2,11 @@ import React, { Component } from 'react'
 import ProductRow from '../ProductRow/ProductRow'
 import OperatePanel from '../OperatePanel/OperatePanel'
 import './VendingMachine.css'
+import coin50 from '../../pic/coin50.jpg';
+import coin10 from '../../pic/coin10.jpg'
+import coin5 from '../../pic/coin5.jpg'
+import coin1 from '../../pic/coin1.jpg'
+import DragCard from '../DragCard/DragCard';
 export class VendingMachine extends Component {
     constructor(props) {
         super(props);
@@ -41,22 +46,42 @@ export class VendingMachine extends Component {
     render() {
         
         return (
-          
-        <div className="vending-machine-body">
+        <div>
+            <div className="vending-machine-body">
+                
             
-           
-            {
-              (this.splitProductDatas(this.state.productDatas)).map((rowProductDatas)=>{
-                  return  <ProductRow productDatas={rowProductDatas[0]} key={rowProductDatas[1]}></ProductRow>
-              })
-            }
+                {
+                (this.splitProductDatas(this.state.productDatas)).map((rowProductDatas)=>{
+                    return  <ProductRow productDatas={rowProductDatas[0]} key={rowProductDatas[1]}></ProductRow>
+                })
+                }
 
-            <OperatePanel></OperatePanel>
+                <OperatePanel></OperatePanel>
+                
             
-            <div value={'oooo'} onClick={(e)=>{console.log(e.target.value)}}>
-                {'oooooo'}
-            </div>
-          
+        </div>
+        <div className="coin-area">
+            <DragCard>
+                <div className="coin" >
+                    <img src={coin50} alt="Background"  id="50" style={{height:'100%',width:'100%'}} />
+                </div>
+            </DragCard>
+            <DragCard>
+                <div className="coin">
+                    <img src={coin10} alt="Background" id="10" style={{height:'85%',width:'90%',marginTop:5}} />
+                </div>
+            </DragCard>
+            <DragCard>
+                <div className="coin">
+                    <img src={coin5} alt="Background" id="5" style={{height:'70%',width:'80%',marginTop:15}} />
+                </div>
+            </DragCard>
+            <DragCard>
+                <div className="coin">
+                    <img src={coin1} alt="Background" id="1" style={{height:'60%',width:'65%',marginTop:20}} />
+                </div>
+            </DragCard>
+        </div>
       </div>
     
         )

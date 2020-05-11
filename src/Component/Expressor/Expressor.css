@@ -1,0 +1,12 @@
+.buy-button{
+    clear:both;
+    float:right;
+    border:1px solid;
+    margin-right:0.3px;
+    padding:2px;
+    cursor: pointer;
+}
+.buy-button:hover{
+    background: greenyellow;
+}
+
