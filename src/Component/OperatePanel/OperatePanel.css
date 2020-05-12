@@ -58,6 +58,7 @@
     width:40px;
     border:2px black solid ;
     background-color: #102e49;
+    border-radius: 3px;
   }
   
   .money-area{
@@ -78,10 +79,11 @@
   .hole{
     position: relative;
     margin-left:20px;
-    margin-top:4.5px;
-    height:40px;
+    margin-top:6px;
+    height:35px;
     width:5px;
-    border:2px black solid 
+    border:2px white solid ;
+    background: white;
   }
 
   .number-button{
@@ -107,5 +109,5 @@
   }
   .coin-slot{
     border-radius: 999em;
-    background: white;
+    background:#102e49;
   }

@@ -1,13 +1,18 @@
 .buy-button{
     clear:both;
     float:right;
-    border:1px solid;
     margin-right:0.3px;
     padding:2px;
     cursor: pointer;
+    background: #2196f3;
+    border-radius:0.1em;
+    color:white;
 }
 .buy-button:hover{
-    background: greenyellow;
+    color:white;
+    background: #2196f3;
+    box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3,0 0 80px#2196f3;
+    
 }
 .diplay-input-money{
     float:left;

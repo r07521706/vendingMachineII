@@ -7,21 +7,14 @@ import coin10 from '../../pic/coin10.jpg'
 import coin5 from '../../pic/coin5.jpg'
 import coin1 from '../../pic/coin1.jpg'
 import DragCard from '../DragCard/DragCard';
+import {connect} from 'react-redux';
 export class VendingMachine extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {productDatas:[{'name':'飲料','price':10},{'name':'舒跑','price':15},{'name':'沙士','price':20},{'name':'雪碧','price':24},{'name':'泡麵','price':30},{'name':'紅茶','price':30}
-        ,{'name':'綠茶','price':18},{'name':'苦茶','price':38},{'name':'飲料','price':10},{'name':'舒跑','price':15},{'name':'沙士','price':20},{'name':'雪碧','price':24},{'name':'泡麵','price':30},{'name':'紅茶','price':30}
-        ,{'name':'綠茶','price':18},{'name':'苦茶','price':38},{'name':'沙士','price':20},{'name':'雪碧','price':24},{'name':'泡麵','price':30},{'name':'紅茶','price':30}
-        ,{'name':'綠茶','price':18}]};
-      }
-    
     splitProductDatas=(data)=>{
-        let rowNum=(Math.ceil(this.state.productDatas.length/7));
+        let rowNum=(Math.ceil(this.props.machine.productDatas.length/7));
         let rowProducts=[]
         let rowProduct=[]
         let real_index =0
-        let new_productDatas=this.state.productDatas
+        let new_productDatas=this.props.machine.productDatas
         for(let i=0;i<new_productDatas.length;i++){
             new_productDatas[i]['key']=i
         }
@@ -49,9 +42,8 @@ export class VendingMachine extends Component {
         <div>
             <div className="vending-machine-body">
                 
-            
                 {
-                (this.splitProductDatas(this.state.productDatas)).map((rowProductDatas)=>{
+                (this.splitProductDatas(this.props.machine.productDatas)).map((rowProductDatas)=>{
                     return  <ProductRow productDatas={rowProductDatas[0]} key={rowProductDatas[1]}></ProductRow>
                 })
                 }
@@ -87,5 +79,15 @@ export class VendingMachine extends Component {
         )
     }
 }
-
-export default VendingMachine
+const mapStateToProps = state =>({
+    machine:state.machine,
+  })
+  const mapDispatchToProps =  dispatch=>({
+    setPrice:(price)=>dispatch(
+      {
+      type:'SET_PRICE',
+      payload: price}
+      ),
+  
+  });
+export default connect(mapStateToProps,mapDispatchToProps)(VendingMachine);

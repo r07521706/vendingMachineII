@@ -2,6 +2,7 @@ import React from 'react'
 import Expressor from '../Expressor/Expressor'
 import {connect} from 'react-redux'
 import Board from '../Board/Board'
+import { ReactComponent as Refund } from '../../pic/refund.svg';
 import './OperatePanel.css'
 function OperatePanel(props) {
     const inspectLength = ()=>{
@@ -27,7 +28,9 @@ function OperatePanel(props) {
 
             <div className = "money-area">
                 <div className = "back-button" onClick={()=>{props.cleanCoin()}}>
-                    <div className = "back-button-start" ></div>
+                    <div className = "back-button-start" >
+                        
+                    </div>
                 </div>
                 <Board id = 'board-1' className ='board'>
                     <div className = "coin-slot" >
