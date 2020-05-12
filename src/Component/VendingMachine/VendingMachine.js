@@ -63,22 +63,22 @@ export class VendingMachine extends Component {
         <div className="coin-area">
             <DragCard>
                 <div className="coin" >
-                    <img src={coin50} alt="Background"  id="50" style={{height:'100%',width:'100%'}} />
+                    <img src={coin50} alt="Background"  id="50" style={{height:'100%',width:'100%',background:"#255784"}} />
                 </div>
             </DragCard>
             <DragCard>
                 <div className="coin">
-                    <img src={coin10} alt="Background" id="10" style={{height:'85%',width:'90%',marginTop:5}} />
+                    <img src={coin10} alt="Background" id="10" style={{height:'85%',width:'90%',marginTop:5,background:"#255784"}} />
                 </div>
             </DragCard>
             <DragCard>
                 <div className="coin">
-                    <img src={coin5} alt="Background" id="5" style={{height:'70%',width:'80%',marginTop:15}} />
+                    <img src={coin5} alt="Background" id="5" style={{height:'70%',width:'80%',marginTop:15,background:"#255784"}} />
                 </div>
             </DragCard>
             <DragCard>
                 <div className="coin">
-                    <img src={coin1} alt="Background" id="1" style={{height:'60%',width:'65%',marginTop:20}} />
+                    <img src={coin1} alt="Background" id="1" style={{height:'60%',width:'65%',marginTop:20,background:"#255784"}} />
                 </div>
             </DragCard>
         </div>

@@ -4,7 +4,14 @@
     margin-left:200px;
     height: 900px;
     width: 600px;
-    border:2px solid;
+    border:2px  #255784 solid ;
+    background: #2196f3;
     float: left;
-    
+    border-radius:1em;
+  }
+  /* #2196f3; */
+  .vending-machine-body:hover{
+    color:#255784;
+    background: #2196f3;
+    box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3,0 0 80px#2196f3;
   }

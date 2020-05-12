@@ -1,3 +1,14 @@
+.operate-panel{
+
+  position: relative;
+  margin: 20px auto;
+  height: 350px;
+  width: 500px;
+  border:2px #74bcfc;
+  border-radius: 10px;
+  background: #1b5486;
+}
+
 .input-button{
     position: relative;
     margin: 20px 20px;
@@ -15,7 +26,7 @@
     height: 50px;
     width: 50px;
     border-radius:999em;
-    border:2px red solid ;
+    border:2px #255784 solid ;
     right: -10px;
   
   }
@@ -27,7 +38,9 @@
     height: 50px;
     width: 50px;
     border-radius:999em;
-    border:2px red solid ;
+    background-color: white  ;
+    border:2px white solid ;
+   
   }
   
   .back-button:active:nth-child(1) div{
@@ -44,7 +57,7 @@
     height:5px;
     width:40px;
     border:2px black solid ;
-    background-color: blue;
+    background-color: #102e49;
   }
   
   .money-area{
@@ -69,4 +82,30 @@
     height:40px;
     width:5px;
     border:2px black solid 
+  }
+
+  .number-button{
+    cursor: pointer;
+    height:25%;
+    width:26%;
+    margin:1px;
+    float:left;
+    background:white;
+    border:0px;
+    box-shadow:-3px -3px 9px rgb(29, 80, 175);
+    border-radius: 5px;
+  }
+  .pickup-area{
+    float: left;
+    position: absolute;
+    margin-left:90px;
+    bottom:10px;
+    height: 100px;
+    width: 350px;
+    border-radius: 5px;
+    background:black;
+  }
+  .coin-slot{
+    border-radius: 999em;
+    background: white;
   }

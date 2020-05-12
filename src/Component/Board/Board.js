@@ -7,7 +7,6 @@ function Board(props){
     }
     const dragOver = e=>{
         e.preventDefault();
-
     }
 
     return(

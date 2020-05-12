@@ -9,4 +9,15 @@
 .buy-button:hover{
     background: greenyellow;
 }
+.diplay-input-money{
+    float:left;
+    position: relative;
+    height: 100px;
+    width: 120px;
+    border:0px;
+    margin-top:15px;
+    background:white;
+    padding: 5px;
+    border-radius:5px;
+  }
 

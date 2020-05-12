@@ -3,16 +3,17 @@
     height:80px;
     width:45px;
     margin:10px;
-    border:2px solid;
+  
     float:left;
   }
   
   .price{
     position: absolute;
-    height:15px;
+    height:17px;
     width:42px;
-    bottom:7px;
+    bottom:5px;
     margin-left:1px;
-    border:1px solid;
+   
+    color:white;;
     float:left;
   }

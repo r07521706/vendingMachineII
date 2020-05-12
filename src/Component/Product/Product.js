@@ -1,4 +1,6 @@
-import React from 'react'
+import React, { Component } from 'react';
+import drink from '../../pic/drink-water.svg';
+import { ReactComponent as Drink } from '../../pic/drink-water.svg';
 import {connect} from 'react-redux';
 import './Product.css'
 function Product(props) {
@@ -10,10 +12,7 @@ function Product(props) {
         <div>
             <div className="product" onClick={handleOnClick}>
                 <div className = "view">{props.productData.name}
-                
-                    <div style={{color:'red'}}>
-                        {props.productData.key}
-                    </div>
+                     <Drink className="drink" alt="logo" strokeWidth="1rem" style={{width:"100%",height:"100%"}}/>
                 </div>
                 <div className = "price">
                    {props.productData.price}
