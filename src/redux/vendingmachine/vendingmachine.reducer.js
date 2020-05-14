@@ -12,7 +12,8 @@ const INITIAL_STATE={
     number:'',
     coin:0,
     chooseCoin:'',
-    productDatas:keyProducts
+    productDatas:keyProducts,
+    lamp:''
    }
    
    const machineReducer = (state = INITIAL_STATE,action)=>{
@@ -47,6 +48,11 @@ const INITIAL_STATE={
                 return{
                     ...state,
                     coin:0
+                }
+            case 'SET_LAMP':
+                return{
+                    ...state,
+                    lamp:action.payload
                 }
            default:
                return state
