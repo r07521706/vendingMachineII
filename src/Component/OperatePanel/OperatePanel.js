@@ -2,7 +2,7 @@ import React from 'react'
 import Expressor from '../Expressor/Expressor'
 import {connect} from 'react-redux'
 import Board from '../Board/Board'
-import { ReactComponent as Refund } from '../../pic/refund.svg';
+import {setNumber,cleanNumber,cleanCoin} from '../../redux/v_machine/v_machine.action'
 import './OperatePanel.css'
 function OperatePanel(props) {
     const inspectLength = ()=>{
@@ -50,19 +50,8 @@ const mapStateToProps = state =>({
     machine:state.machine,
   })
   const mapDispatchToProps =  dispatch=>({
-    setNumber:(number)=>dispatch(
-      {
-      type:'SET_NUMBER',
-      payload: number}
-      ),
-    cleanNumber:()=>dispatch(
-        {
-        type:'CLEAN_NUMBER'}
-        ),
-    cleanCoin:()=>dispatch(
-        {
-        type:'CLEAN_COIN'
-        }
-    )  
+    setNumber:(number)=>dispatch(setNumber(number)),
+    cleanNumber:()=>dispatch(cleanNumber()),
+    cleanCoin:()=>dispatch(cleanCoin())  
   });
 export default connect(mapStateToProps,mapDispatchToProps)(OperatePanel);

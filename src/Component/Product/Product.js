@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { ReactComponent as Drink } from '../../pic/drink-water.svg';
 import { ReactComponent as Coke } from '../../pic/coke.svg';
+import {setPrice,cleanNumber} from '../../redux/v_machine/v_machine.action'
 import {connect} from 'react-redux';
 import './Product.css'
 function Product(props) {
@@ -39,14 +40,7 @@ const mapStateToProps = state =>({
     machine:state.machine,
   })
   const mapDispatchToProps =  dispatch=>({
-    setPrice:(price)=>dispatch(
-      {
-      type:'SET_PRICE',
-      payload: price}
-      ),
-    cleanNumber:()=>dispatch({
-        type:'CLEAN_NUMBER'
-    })
-  
+    setPrice:(price)=>dispatch(setPrice(price)),
+    cleanNumber:()=>dispatch(cleanNumber())
   });
 export default connect(mapStateToProps,mapDispatchToProps)(Product);
