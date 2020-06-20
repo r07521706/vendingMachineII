@@ -13,21 +13,20 @@ export class VendingMachine extends Component {
     <div>
         <div className="vending-machine-body">
                 {
-                    (splitProductDatas(this.props.machine.productDatas)).map((rowProductDatas)=>{
+                    (splitProductDatas(this.props.productDatas)).map((rowProductDatas)=>{
                         return  <ProductRow productDatas={rowProductDatas[0]} key={rowProductDatas[1]}></ProductRow>
                     })
                 }
                 <OperatePanel></OperatePanel>
         </div>
-        <CoinArea></CoinArea>
-                
+        <CoinArea></CoinArea> 
       </div>
     
         )
     }
 }
 const mapStateToProps = state =>({
-    machine:state.machine,
+    productDatas:state.machine.productDatas,
   })
 
 export default connect(mapStateToProps,null)(VendingMachine);
